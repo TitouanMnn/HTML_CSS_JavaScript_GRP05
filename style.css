@@ -1,0 +1,348 @@
+body {
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease, color 0.5s ease; 
+  }
+  header {
+    background-color: green;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    font-size: 1em;
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  nav ul li {
+    display: inline;
+    margin-right: 2em;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  main {
+    padding: 1em;
+  }
+  footer {
+    background-color: green;
+    color:white;
+    text-align: center;
+    padding: 2em;
+    bottom: 0;
+    width: 100%;
+  }
+    
+  .texte{
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+  }
+  .a{
+      display: flex;
+      justify-content: flex-end;
+  }
+  .btn:hover {
+    transform: translateY(-15px) translateX(15px);
+    color: greenyellow;
+    background-color: green;
+
+  }
+.btn {
+    transition: transform 250ms;
+    display: inline-block;
+    border-radius: 15px;
+    background-color: rgb(123, 168, 55);
+    border: none;
+    color: aliceblue;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    
+  }
+
+  .btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .btn:hover span {
+    padding-right: 25px;
+  }
+  
+  .btn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .dimension {  
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;  
+    font-family: verdana;  
+    margin: -1px;
+    font-size: 10em;  
+    font-weight: 700;  
+    color: rgb(50, 50, 50);  
+    text-shadow: 1px 1px 1px #919191,  
+      1px 2px 1px #919191,  
+      1px 3px 1px #919191,  
+      1px 4px 1px #919191,  
+      1px 5px 1px #919191,  
+      1px 6px 1px #919191,  
+      1px 7px 1px #919191,  
+      1px 8px 1px #919191,  
+      1px 9px 1px #919191,  
+      1px 10px 1px #919191,  
+    1px 18px 6px rgba(16,16,16,0.4),  
+    1px 22px 10px rgba(16,16,16,0.2),  
+    1px 25px 35px rgba(16,16,16,0.2),  
+    1px 30px 60px rgba(16,16,16,0.4);  
+  }  
+
+      
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+ 
+  
+  .team {
+    width: 30em;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid white;
+    justify-content: center;
+  }
+  .contacte{
+    text-align: center;
+    max-width: 60em;
+    margin: 0 auto;
+    color:green;
+
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 1em;
+    
+  }
+  
+  input,
+  textarea {
+    margin-bottom: 2em;
+    padding: 1em;
+  }
+  
+  button {
+    padding: 1em;
+    background-color:  rgb(123, 168, 55);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 15px;
+  }
+
+  @media (max-width: 768px) {
+    header {
+        font-size: 0.8em;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+    .dimension {
+        font-size: 2em;
+    }
+    .btn {
+        width: auto;
+        font-size: 1em;
+        padding: 10px;
+    }
+    .team-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .team {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .dimension {
+        font-size: 1.5em;
+    }
+    .btn {
+        font-size: 0.9em;
+        padding: 8px;
+        width: 100%;
+    }
+    .team-list {
+        flex-direction: column;
+    }
+    .contacte {
+        padding: 1em;
+    }
+    input,
+    textarea {
+        max-width: 100%;
+    }
+}
+
+.titre{
+  text-align: center;
+  font-family: fantasy;
+  font-weight: 100;
+  justify-content: center;
+  padding: 1em;
+  font-size: 2em;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; 
+  justify-items: center; 
+  padding: 3em;
+}
+
+.cards-container img {
+  width: 100%; 
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+
+  transition: transform 0.2s ease-in-out;
+}
+
+.cards-container img:hover {
+  transform: scale(1.05);
+}
+
+.indent{
+  text-indent: 8em;
+  font-size: 35px;
+}
+
+button:hover {
+  background-color: greenyellow;
+}
+
+.welcome-section {
+  background: linear-gradient(135deg, #f0f4f7, rgb(140, 235, 140));
+  padding: 3em 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 2em auto;
+  text-align: center;
+  color: #333;
+}
+
+
+.welcome-section h1 {
+  font-size: 2.5em;
+  color: green;
+  margin-bottom: 0.5em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: color 0.3s ease-in-out;
+}
+
+
+.welcome-section h2 {
+  font-size: 1.8em;
+  color: green;
+  margin: 0.8em 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+
+.welcome-section p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5em;
+}
+
+
+.welcome-section h1:hover {
+  color: rgb(4, 75, 4);
+}
+
+
+.explore-btn {
+  display: inline-block;
+  padding: 0.8em 1.5em;
+  margin-top: 1em;
+  font-size: 1.2em;
+  color: white;
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.explore-btn:hover {
+  background-color: yellowgreen;
+}
+
+.darkmode {
+  background-color: rgb(47, 47, 47);
+  color: white;
+  
+}
+nav {
+  display: none;
+}
+nav.active {
+  display: block;
+}
+
+.menu-icon {
+  transition: transform 250ms;
+  display: inline-block;
+  border-radius: 15px;
+  background-color: rgb(123, 168, 55);
+  border: none;
+  color: aliceblue;
+  text-align: center;
+  font-size: 28px;
+  width: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+
+}
+
+.menu-icon:hover{
+  background-color: greenyellow;
+}

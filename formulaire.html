@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>formulaire</title>
+</head>
+<body>
+  <header>
+    <h1 class="dimension">Formulaire</h1>
+    <div class="menu-icon">☰</div>
+    <nav>
+      <ul>
+        <li><a button class="btn" href="accueil.html"><span>Accueil</span></a></li><!--permettant sur la page web de naviguer entre les différentes pages-->
+        <li><a button class="btn" href="collections.html"><span>Collections</span></a></li><!--permettant sur la page web de naviguer entre les différentes pages-->
+        <li><a button class="btn" href="formulaire.html"><span>Formulaire</span></a></li> <!--permettant sur la page web de naviguer entre les différentes pages-->
+        <li><button onclick="darkmode()"><img src="Lunee.png" alt="darkmode"></button> </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="contacte">
+      <h2>Contactez-nous</h2>
+      <form>
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required><!--code permettant de créer un formulaire à remplir pour l'utilisateur-->
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password">
+        <br>
+        <label for="confirmPassword">Confirmer le mot de passe :</label>
+        <input type="password" id="confirmPassword" required>
+        <br>
+        <p id="message" class="error"></p>
+        <div id="mdpError"></div>
+        <label>Quels sont les sports que vous souhaiteriez voir par la suite sur le site?</label>
+        <div>
+          <input type="radio" id="football" name="sport" value="football" required>
+          <label for="football">Football</label>
+        </div>
+        <div>
+          <input type="radio" id="basket" name="sport" value="basket">
+          <label for="basket">Basketball</label>
+        </div>
+        <div>
+          <input type="radio" id="tennis" name="sport" value="tennis">
+          <label for="tennis">Tennis</label>
+        </div>
+        <div>
+          <input type="radio" id="natation" name="sport" value="natation">
+          <label for="natation">Natation</label>
+        </div>
+        <label for="message">Votre avis nous intéresse !! :</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+  </main>
+  <footer>
+    <p> PaniniCards numéro: 06 06 06 06 06</p>
+    <p>nous contacter par mail:Paninicards@gmail.com</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
